@@ -15,7 +15,7 @@ const ModalCreateNewService: React.FC<ModalCreateNewServiceProps> = ({
   visible,
   onCancel,
   onOk,
-  onClose
+  onClose,
 }) => {
   const PRICE_TYPE = {
     VARIES: 'VARIES',
@@ -117,7 +117,12 @@ const ModalCreateNewService: React.FC<ModalCreateNewServiceProps> = ({
                   </Form.Item>
                 </div>
               ) : (
-                <Form.Item label='Fixed Price' name='fix_price' className={styles.inputItem}>
+                <Form.Item
+                  label='Fixed Price'
+                  name='fix_price'
+                  className={styles.inputItem}
+                  rules={[{ required: true, message: 'Enter fixed price' }]}
+                >
                   <Input type='number' placeholder='' min={0} className={styles.inputField} />
                 </Form.Item>
               )}
