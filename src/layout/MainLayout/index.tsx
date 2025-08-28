@@ -1,4 +1,3 @@
-import CustomForm from '@components/Form';
 import dynamic from 'next/dynamic';
 
 const MainHeader = dynamic(() => import('../components/MainHeader'));
@@ -9,9 +8,8 @@ const MainLayout = ({ children }: any) => {
   return (
     <>
       {/* <MainHeader /> */}
-      {/* <main>{children}</main> */}
+      <main>{children}</main>
       {/* <Footer /> */}
-      <CustomForm />
     </>
   );
 };
