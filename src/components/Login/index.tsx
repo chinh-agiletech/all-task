@@ -8,8 +8,7 @@ import { toast } from '@components/UI/Toast/toast';
 
 const Login = () => {
   const router = useRouter();
-  // Dummy login API
-  const loginApi = async (values: { username: string }) => {
+    const loginApi = async (values: { username: string }): Promise<{ username: string }> => {
     return new Promise((resolve) => setTimeout(() => resolve(values), 1000));
   };
 
