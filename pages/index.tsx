@@ -3,9 +3,13 @@ import { ReactElement } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import MainLayout from '@layout/MainLayout';
+import NewServiceTable from '@components/NewService';
+
 
 const HomePage = () => {
-  return <div></div>;
+  return <div>
+    <NewServiceTable />
+  </div>;
 };
 
 HomePage.getLayout = function getLayout(page: ReactElement) {

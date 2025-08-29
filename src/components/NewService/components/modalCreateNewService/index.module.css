@@ -1,0 +1,60 @@
+.customModal .ant-modal-content {
+  border-radius: 16px;
+  padding: 32px 24px;
+  background: #fff;
+  width: 100% !important;
+}
+
+.customModal .ant-modal-header {
+  border-radius: 16px 16px 0 0;
+  background: #f5f7fa;
+  padding: 24px 24px 16px 24px;
+}
+
+.customModal .ant-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.customModal .ant-modal-close {
+  top: 20px;
+  right: 20px;
+}
+
+.customModal .ant-modal-body {
+  padding: 0;
+}
+
+/* Rows */
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.inputItem {
+  width: 100%;
+}
+
+.priceGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.submitBtnCustom {
+  min-width: 90px;
+  min-height: 40px;
+}
+
+.submitBtnWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.formContainer {
+  padding: 16px 0;
+}
