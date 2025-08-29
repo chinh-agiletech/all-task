@@ -2,8 +2,7 @@ import React from 'react';
 import { Modal, Form, Input, Button, Select } from 'antd';
 import { useState } from 'react';
 import styles from './index.module.css';
-import { toast } from 'sonner';
-
+import { toast } from '../../../UI/Toast/toast';
 interface ModalCreateNewServiceProps {
   visible: boolean;
   onCancel: () => void;
@@ -38,10 +37,10 @@ const ModalCreateNewService: React.FC<ModalCreateNewServiceProps> = ({
     if (values) {
       toast.success('Form submitted successfully!');
       console.log('Form values:', values);
-      onClose?.();
     } else {
       toast.error('Form submission failed!');
     }
+    onClose?.();
   };
 
   return (

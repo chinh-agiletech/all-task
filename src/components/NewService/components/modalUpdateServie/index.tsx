@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, Form, Input, Button, Select } from 'antd';
 import { useState } from 'react';
 import styles from './index.module.css';
-import { toast } from 'sonner';
+import { toast } from '../../../UI/Toast/toast';
 
 interface ModalUpdateServiceProps {
   visible: boolean;
@@ -47,13 +47,14 @@ const ModalUpdateService: React.FC<ModalUpdateServiceProps> = ({
   };
 
   const handleSubmit = (values: any) => {
-    if (values) {
+    if (!values) {
       toast.success('Saved successfully!');
       console.log('Form updated values:', values);
       onClose?.();
     } else {
       toast.error('Form submission failed!');
     }
+    onClose?.();
   };
 
   return (

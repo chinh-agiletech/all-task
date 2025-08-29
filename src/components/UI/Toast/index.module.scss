@@ -1,17 +1,30 @@
 .msg {
-  > div {
-    gap: 12px;
-  }
-  width: 395px;
+  display: flex;            
+  justify-content: space-between;
+  align-items: center;
+
+  width: 460px;              /* rộng hơn */
   padding: 9px 16px;
   border-radius: 6px;
+  border: 1px solid #fff;         
+  // background: #f9f9f9;           
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  font-size: 14px !important;           /* chữ nhỏ lại */
+
+  > div {
+    display: flex;          
+    align-items: center;
+    gap: 12px;
+  }
 }
 
 .msgSuccess {
-  border: 1px solid var(--success-bghover);
-  background: var(--success-background);
+  border-color: #fff;
+  border-radius: 4px;
 }
+
 .msgError {
-  border: 1px solid var(--error-bghover);
-  background: var(--error-background);
+  border-color: #fff;            
+  border-radius: 4px;        
 }
