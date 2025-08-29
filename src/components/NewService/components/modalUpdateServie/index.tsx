@@ -47,7 +47,7 @@ const ModalUpdateService: React.FC<ModalUpdateServiceProps> = ({
   };
 
   const handleSubmit = (values: any) => {
-    if (!values) {
+    if (values) {
       toast.success('Saved successfully!');
       console.log('Form updated values:', values);
       onClose?.();
