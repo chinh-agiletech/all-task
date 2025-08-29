@@ -1,25 +1,33 @@
 import classNames from 'classnames';
 import { toast as t } from 'sonner';
 
-// import { Icon } from '~components/UI/IconFont/Icon';
-
+import Text from '../Text';
 import styles from './index.module.scss';
+
+// Import icon từ antd
+import {
+  CheckCircleFilled,
+  CloseCircleFilled,
+  CloseOutlined,
+} from '@ant-design/icons';
 
 export const toast = {
   success: (message: string) => {
     t.custom((id) => (
       <div className={classNames(styles.msg, styles.msgSuccess)}>
         <div>
-          {/* <Icon
-            icon='t4font-check-circle-fill'
-            color='success-main'
+          <CheckCircleFilled
+            style={{ color: '#52c41a', fontSize: 20, cursor: 'pointer' }}
             onClick={() => t.dismiss(id)}
-          /> */}
-          {/* <Text type='caption2' color='text-primary'>
+          />
+          <Text color='primary-1'>
             {message}
-          </Text> */}
+          </Text>
         </div>
-        {/* <Icon icon='t4font-ic-close' onClick={() => t.dismiss(id)} /> */}
+        <CloseOutlined
+          style={{ fontSize: 18, cursor: 'pointer' }}
+          onClick={() => t.dismiss(id)}
+        />
       </div>
     ));
   },
@@ -28,16 +36,18 @@ export const toast = {
     t.custom((id) => (
       <div className={classNames(styles.msg, styles.msgError)}>
         <div>
-          {/* <Icon
-            icon='t4font-ic-close-circle-fill'
-            color='error-main'
+          <CloseCircleFilled
+            style={{ color: '#ff4d4f', fontSize: 20, cursor: 'pointer' }}
             onClick={() => t.dismiss(id)}
-          /> */}
-          {/* <Text type='caption2' color='text-primary'>
+          />
+          <Text color='primary-1'>
             {message}
-          </Text> */}
+          </Text>
         </div>
-        {/* <Icon icon='t4font-ic-close' onClick={() => t.dismiss(id)} /> */}
+        <CloseOutlined
+          style={{ fontSize: 18, cursor: 'pointer' }}
+          onClick={() => t.dismiss(id)}
+        />
       </div>
     ));
   },

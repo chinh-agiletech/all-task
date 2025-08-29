@@ -3,9 +3,13 @@ import { ReactElement } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import MainLayout from '@layout/MainLayout';
+import LoginPage from './login/page';
+
 
 const HomePage = () => {
-  return <div></div>;
+  return <div>
+    <LoginPage />
+  </div>;
 };
 
 HomePage.getLayout = function getLayout(page: ReactElement) {
